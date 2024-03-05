@@ -19,13 +19,50 @@ grades.pop()
 console.log(grades)
 console.log(grades.indexOf(65))
 
-// To check somethiong is present in th array
+// To check something is present in th array
 
 console.log(grades.includes(23))
 
 
-// Reduce, Filter and Map Functions on Arrays
+// Using Reduce function instead of for loop to add array elements Filter and Map Functions on Arrays
 
 let sum = 0;
 let totalMarks =grades.reduce((sum, mark) => sum+mark,0)
 console.log(totalMarks)
+
+// Printing only even numbers 
+
+var scores = [12, 13, 14, 15, 16]
+var evenScores =[]
+
+for(i =0; i<scores.length; i++){
+   if(scores[i]% 2 == 0){
+       evenScores.push(scores[i])
+   }
+}
+
+console.log(evenScores)
+
+// Printing only even numbers using filter function instead of for loop
+
+let newEvenScores = scores.filter(score=>score % 2 ==0)
+console.log(newEvenScores)
+
+// Printing newEvenScores elements multiplied by 3 using map method
+
+// let multipleOfThree = newEvenScores.map(score=> score*3)
+// console.log(multipleOfThree)
+
+// // console.log(scores.join('+'))
+
+// let totalOfTheArray = multipleOfThree.reduce((sum, val)=> sum + val, 0);
+// console.log(totalOfTheArray)
+
+// Applyiong function on function 
+
+let combinedFunctionsArray = newEvenScores.map(score=> score*3).reduce((sum, val)=> sum + val, 0);
+console.log(combinedFunctionsArray)
+
+var scores1 = [12, 3, 15, 16, 18, 20, 25]
+
+console.log(scores1.sort((a, b) => a-b))
